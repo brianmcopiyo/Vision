@@ -3,14 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="light.css" id="main-styles" />
+    <title>Framework</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Immediately set the theme before the page renders
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = savedTheme + ".css";
+        link.id = "theme-styles";
+        document.head.appendChild(link);
+      })();
+    </script>
   </head>
   <body>
     <h1>Hello, World!</h1>
-    <p>This is a paragraph.</p>
+    <h2>Subheading</h2>
+    <p>This is a paragraph demonstrating the base text styles.</p>
+    <p>
+      <strong>Strong text</strong> and <em>italic text</em> are styled
+      accordingly.
+    </p>
+    <p>Here is a <a href="#">link</a> to demonstrate link styles.</p>
+    <blockquote>
+      This is a blockquote to showcase blockquote styling.
+    </blockquote>
+    <pre><code>const example = "Code block";</code></pre>
+    <ul>
+      <li>Unordered list item 1</li>
+      <li>Unordered list item 2</li>
+    </ul>
+    <ol>
+      <li>Ordered list item 1</li>
+      <li>Ordered list item 2</li>
+    </ol>
+    <table>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+      </tr>
+    </table>
+    <hr />
     <div class="card">
-      <p>This is a card.</p>
+      <h3>Card Title</h3>
+      <p>This is a sample card with some content.</p>
     </div>
     <button id="toggle-theme">Toggle Theme</button>
     <script src="script.js"></script>

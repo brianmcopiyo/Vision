@@ -1,19 +1,19 @@
 // script.js
 
-// Function to dynamically load a CSS file
-function loadCSS(url) {
-    var link = document.getElementById('main-styles');
+// Function to dynamically load a theme CSS file
+function loadThemeCSS(url) {
+    var link = document.getElementById('theme-styles');
     link.href = url;
 }
 
 // Function to toggle between light and dark mode
 function toggleTheme() {
-    var currentTheme = document.getElementById('main-styles').getAttribute('href');
+    var currentTheme = document.getElementById('theme-styles').getAttribute('href');
     if (currentTheme === 'light.css') {
-        loadCSS('dark.css');
+        loadThemeCSS('dark.css');
         localStorage.setItem('theme', 'dark');
     } else {
-        loadCSS('light.css');
+        loadThemeCSS('light.css');
         localStorage.setItem('theme', 'light');
     }
 }
@@ -21,7 +21,7 @@ function toggleTheme() {
 // Load theme from localStorage
 window.addEventListener('load', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
-    loadCSS(savedTheme + '.css');
+    loadThemeCSS(savedTheme + '.css');
 });
 
 // Add event listener to the button
