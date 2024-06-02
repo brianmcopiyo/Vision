@@ -1,0 +1,23 @@
+@import url('reset.css');
+
+/* Light mode styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9F9FB;
+    color: #222222;
+}
+
+h1 {
+    color: #222222;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #222222;
+}
